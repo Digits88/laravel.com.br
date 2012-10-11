@@ -1,9 +1,46 @@
-# Pull request guidelines
+Guia para contribuição
+======================
 
-[GitHub pull requests](https://help.github.com/articles/using-pull-requests) are a great way for everyone in the community to contribute to the Laravel codebase. Found a bug? Just fix it in your fork and submit a pull request. This will then be reviewed, and, if found as good, merged into the main repository.
+## Seu próprio fork
+Primeiramente, faça seu [fork](https://help.github.com/articles/fork-a-repo) do repositório [LaravelBrasil/laravel.com.br](https://github.com/LaravelBrasil/laravel.com.br). É nele que você deve fazer as modificações primeiramente. Depois de clonar seu fork adicione o remote do repositório original ao seu ambiente com o comando.
+```
+git remote add upstream https://github.com/LaravelBrasil/laravel.com.br.git
+```
 
-In order to keep the codebase clean, stable and at high quality, even with so many people contributing, some guidelines are necessary for high-quality pull requests:
+## Enviando contribuições
 
-- **Branch:** Unless they are immediate documentation fixes relevant for old versions, pull requests should be sent to the `develop` branch only. Make sure to select that branch as target when creating the pull request (GitHub will not automatically select it.)
-- **Documentation:** If you are adding a new feature or changing the API in any relevant way, this should be documented. The documentation files can be found directly in the core repository.
-- **Unit tests:** To keep old bugs from re-appearing and generally hold quality at a high level, the Laravel core is thoroughly unit-tested. Thus, when you create a pull request, it is expected that you unit test any new code you add. For any bug you fix, you should also add regression tests to make sure the bug will never appear again. If you are unsure about how to write tests, the core team or other contributors will gladly help.
+Segue uma sugestão de ciclo de trabalho:
+
+### 1. Mantenha o branch master do seu fork atualizado
+
+Com o conteúdo do LaravelBrasil/laravel.com.br
+
+```
+git checkout master
+git fetch upstream
+git merge upstream/master
+```
+
+### 2. Crie um branch
+
+Crie um branch para suas novas modificações
+
+```
+git-checkout -b <nome-do-branch>
+```
+
+### 3. Faça suas alterações
+
+Faça as alterações e os **commits** que forem necessários no seu branch
+
+### 4. Envie um Pull Request
+
+Envie um [Pull Request](https://help.github.com/articles/using-pull-requests) do seu branch para o branch **DEVELOPMENT** do repositório LaravelBrasil/laravel.com.br. Seja descritivo no seu Pull Request, explique o que há de novo.
+
+## Organização e guidelines
+
+Para mantermos o código limpo, estável e com qualidade algumas guidelines são necessárioas para pull requests de qualidade:
+
+- **Branch:** Pull requests devem ser enviados ao branch `development`. Então tenha certeza de escolher o alvo do pull request corretamente antes de apertar 'Send'.
+- **Descrição:** Seja descritivo no seu Pull request. Explique do que se trata pelo menos. Sabendo aonde você quer chegar fica muito mais facil fazer o code-review.
+- **Testes:** [TODO]
