@@ -1,6 +1,8 @@
 Guia para contribuição
 ======================
 
+Guia rápido que explica como você pode contribuir com o projeto.
+
 ## Seu próprio fork
 Primeiramente, faça seu [fork](https://help.github.com/articles/fork-a-repo) do repositório [LaravelBrasil/laravel.com.br](https://github.com/LaravelBrasil/laravel.com.br). É nele que você deve fazer as modificações primeiramente. Depois de clonar seu fork adicione o remote do repositório original ao seu ambiente com o comando.
 ```
